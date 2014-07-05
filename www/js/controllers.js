@@ -1,7 +1,7 @@
 angular.module('directory.controllers', [])
 
 
-    .controller('EmployeeIndexCtrl', function ($scope, EmployeeService, Employee) {
+    .controller('EmployeeIndexCtrl', function ($scope, Employee) {
 
         $scope.searchKey = "";
 
