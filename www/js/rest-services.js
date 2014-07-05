@@ -1,5 +1,4 @@
 /**
- * Created by Saltuk Alakus on 29.06.2014.
  *
  * Happily copied form https://github.com/ccoenraets/angular-directory
  *
