@@ -8,6 +8,7 @@
   "dependencies": {
     "angular": "1.2.10",
     "angular-route": "1.2.10",
+    "angular-mocks": "1.2.10",
     "ionic": "v0.9.23",
     "angular-resource": "1.2.10"
   }
