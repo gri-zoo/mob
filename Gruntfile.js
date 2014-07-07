@@ -18,6 +18,11 @@ module.exports = function(grunt) {
         configFile: 'config/karma.conf.js',
         singleRun: true,
       },
+      travis: {
+        configFile: 'config/karma.conf.js',
+        singleRun: true,
+        browsers: ['PhantomJS']
+      }
     },
     watch: {
       karma: {
@@ -33,7 +38,7 @@ module.exports = function(grunt) {
         keepAlive: true, // If false, the grunt process stops when the test fails.
         noColor: false, // If true, protractor will not use colors in its output.
       },
-      chrome: {
+      firefox: {
         options: {
           args: {} // Target-specific arguments
         }
@@ -47,6 +52,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-protractor-runner');
 
   grunt.registerTask('unit-continuous', ['karma:continuous', 'watch']);
-  grunt.registerTask('unit', ['karma:single']);
-  grunt.registerTask('e2e', ['protractor']);
+  grunt.registerTask('test', ['karma:travis', 'protractor']);
 };
